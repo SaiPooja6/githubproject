@@ -9,5 +9,21 @@ from PIL import Image
 def grayscaled_image(image:Image.Image)->Image.Image:
     image = image.convert("L")
     return image
+def resized_image(image:Image.Image)->Image.Image:
+    image = image.resize((300, 300))
+    return image
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
