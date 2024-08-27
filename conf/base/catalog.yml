@@ -2,6 +2,6 @@ colored_image:
   type: kedro_datasets.pillow.ImageDataset
   filepath: data/01_raw/colored_image.png
 
-grayscaled_image:
+grayscaled_image1:
   type: kedro_datasets.pillow.ImageDataset
   filepath: data/02_intermediate/grayscaled_image1.png  
