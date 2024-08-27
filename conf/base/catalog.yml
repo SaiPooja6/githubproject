@@ -9,3 +9,7 @@ grayscaled_image1:
 resized_image:
   type: kedro_datasets.pillow.ImageDataset
   filepath: data/03_primary/resized_image.png    
+
+final_image:
+  type: kedro_datasets.pillow.ImageDataset
+  filepath: data/04_feature/rfinal_image1.png    
