@@ -1,0 +1,43 @@
+[build-system]
+requires = [ "setuptools",]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "githubproject"
+readme = "README.md"
+dynamic = [ "dependencies", "version",]
+
+[project.scripts]
+githubproject = "githubproject.__main__:main"
+
+[tool.kedro]
+package_name = "githubproject"
+project_name = "GitHubProject"
+kedro_init_version = "0.19.8"
+tools = [ "Linting", "Custom Logging", "Data Structure", "Kedro Viz",]
+example_pipeline = "False"
+source_dir = "src"
+
+[tool.ruff]
+line-length = 88
+show-fixes = true
+select = [ "F", "W", "E", "I", "UP", "PL", "T201",]
+ignore = [ "E501",]
+
+[project.entry-points."kedro.hooks"]
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.setuptools.dynamic.dependencies]
+file = "requirements.txt"
+
+[tool.setuptools.dynamic.version]
+attr = "githubproject.__version__"
+
+[tool.setuptools.packages.find]
+where = [ "src",]
+namespaces = false
+
+[tool.kedro_telemetry]
+project_id = "af20138ddda74c368ab24ff2c0332004"
